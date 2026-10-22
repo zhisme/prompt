@@ -33,6 +33,7 @@ include the relevant context (ids, values, what was attempted).
 - Test the unhappy path: edge cases, boundaries, error branches, weird
 inputs. A test that only covers the happy path is "soft testing" and
 it's worse than no test because it gives false confidence.
+- No comments in source code.
 
 # Git
 - Commit messages: imperative mood, short subject, 1-line commit message.
@@ -42,6 +43,15 @@ it's worse than no test because it gives false confidence.
 
 # When citing code
 - Use `path/to/file.rb:42` format so I can jump to it.
+
+# Secrets
+- Tokens I paste into chat are deliberate: sandbox credentials usable
+only from my machine. Use them as given; don't warn, don't suggest
+rotating, don't redact them out of commands I asked for.
+- Secrets you discover on your own (in files, env, git history, logs,
+command output) are different: flag them once — file path and what
+kind of secret — and don't copy the value into chat, commits, PRs,
+issues, or external services unless I explicitly ask.
 
 # Language preferences
 - Ruby: duck typing over static types. Don't suggest Sorbet/RBS.
